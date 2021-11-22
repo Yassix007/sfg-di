@@ -1,6 +1,7 @@
 package me.yassix007.sfgdi;
 
 import me.yassix007.sfgdi.beans.MyDaraSource;
+import me.yassix007.sfgdi.beans.MyDevDaraSource;
 import me.yassix007.sfgdi.beans.MyTestDaraSource;
 import me.yassix007.sfgdi.controllers.*;
 import org.springframework.boot.SpringApplication;
@@ -47,6 +48,12 @@ public class SfgDiApplication {
 		System.out.println(myTestDaraSource.getIpAddress());
 		System.out.println(myTestDaraSource.getUserName());
 		System.out.println(myTestDaraSource.getPassword());
+
+		System.out.println("---------------Dev-------------------");
+		MyDevDaraSource myDevDaraSource = ctx.getBean(MyDevDaraSource.class);
+		System.out.println(myDevDaraSource.getIpAddress());
+		System.out.println(myDevDaraSource.getUserName());
+		System.out.println(myDevDaraSource.getPassword());
 	}
 
 }

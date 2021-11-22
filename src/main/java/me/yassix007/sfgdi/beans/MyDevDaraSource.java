@@ -1,13 +1,13 @@
 package me.yassix007.sfgdi.beans;
 
-public class MyTestDaraSource {
+public class MyDevDaraSource {
 
     private String ipAddress;
     private String userName;
     private String password;
 
 
-    public MyTestDaraSource(String ipAddress, String userName, String password) {
+    public MyDevDaraSource(String ipAddress, String userName, String password) {
         this.ipAddress = ipAddress;
         this.userName = userName;
         this.password = password;

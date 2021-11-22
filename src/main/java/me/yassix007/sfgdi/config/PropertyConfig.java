@@ -1,6 +1,7 @@
 package me.yassix007.sfgdi.config;
 
 import me.yassix007.sfgdi.beans.MyDaraSource;
+import me.yassix007.sfgdi.beans.MyDevDaraSource;
 import me.yassix007.sfgdi.beans.MyTestDaraSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -41,6 +42,15 @@ public class PropertyConfig {
     @Value("${test.password}")
     String testPassword;
 
+    @Value("${dev.ip}")
+    String devIpAddress;
+
+    @Value("${dev.user}")
+    String devUserName;
+
+    @Value("${dev.password}")
+    String devPassword;
+
     @Bean
     public MyDaraSource myDaraSource() {
         return new MyDaraSource(ipAddress, userName, password, environment.getProperty("MAVEN_HOME"));
@@ -49,6 +59,11 @@ public class PropertyConfig {
     @Bean
     public MyTestDaraSource myTestDaraSource() {
         return new MyTestDaraSource(testIpAddress, testUserName, testPassword);
+    }
+
+    @Bean
+    public MyDevDaraSource myDevDaraSource() {
+        return new MyDevDaraSource(devIpAddress, devUserName, devPassword);
     }
 
     @Bean
