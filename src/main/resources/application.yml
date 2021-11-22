@@ -2,3 +2,13 @@ dev:
   ip: 10.0.11
   user: devfw
   password: devpass
+
+---
+spring:
+  config:
+    activate:
+      on-profile: EN
+dev:
+  ip: 10.0.11
+  user: devfw-Hello!
+  password: devpass-Hello!
