@@ -1,6 +1,7 @@
 package me.yassix007.sfgdi;
 
 import me.yassix007.sfgdi.beans.MyDaraSource;
+import me.yassix007.sfgdi.beans.MyTestDaraSource;
 import me.yassix007.sfgdi.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -34,10 +35,18 @@ public class SfgDiApplication {
 		ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
 		System.out.println(constructorInjectedController.getGreeting());
 */
+		System.out.println("---------------Prod-------------------");
 		MyDaraSource myDaraSource = ctx.getBean(MyDaraSource.class);
 		System.out.println(myDaraSource.getIpAddress());
 		System.out.println(myDaraSource.getUserName());
 		System.out.println(myDaraSource.getPassword());
+		System.out.println(myDaraSource.getEnvVariable());
+
+		System.out.println("---------------Test-------------------");
+		MyTestDaraSource myTestDaraSource = ctx.getBean(MyTestDaraSource.class);
+		System.out.println(myTestDaraSource.getIpAddress());
+		System.out.println(myTestDaraSource.getUserName());
+		System.out.println(myTestDaraSource.getPassword());
 	}
 
 }

@@ -1,25 +1,17 @@
 package me.yassix007.sfgdi.beans;
 
-public class MyDaraSource {
+public class MyTestDaraSource {
 
     private String ipAddress;
     private String userName;
     private String password;
     private String envVariable;
 
-    public String getEnvVariable() {
-        return envVariable;
-    }
 
-    public void setEnvVariable(String envVariable) {
-        this.envVariable = envVariable;
-    }
-
-    public MyDaraSource(String ipAddress, String userName, String password, String envVariable) {
+    public MyTestDaraSource(String ipAddress, String userName, String password) {
         this.ipAddress = ipAddress;
         this.userName = userName;
         this.password = password;
-        this.envVariable = envVariable;
     }
 
     public String getIpAddress() {
